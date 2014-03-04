@@ -1,0 +1,139 @@
+\chapter{Test Strategy}
+	
+	{\Huge Introduction}
+
+\clearpage
+	\section{Stakeholders}
+
+		{\bf Developers:} Will develop the system, and want the system to satisfy 
+		the requirements from the customer. 
+
+		{\bf End-user:} Will be using the ACC system in their everyday life, and therefore 
+		wants a bug-free system, thus the system operates according to the system. 
+		They also want a high security/safety margin.
+
+		{\bf Testers:} Will test the system. The testers do also need to assure a 
+		specific testing coverage so the QA department can assure the quality level 
+		of the ACC system to the customer. 
+
+		{\bf Customer:} The owner of the ACC system, wants the system to operate 
+		according to the requirements, low cost and short development time.
+
+
+	\section{Test Types}
+
+		{\bf Acceptance testing:} Is the final level of testing were a test is conducted to determine 
+		if the requirements of a specification or contract are met. This test is often held by the customer. 
+
+		{\bf System testing:} is done by testing a complete, integrated system to evaluate the system's
+		compliance with its specified requirements.
+		
+		{\bf Component testing:} Is taking a component of a system and the testing of the component 
+		is done in isolation from the rest of the system.
+		
+		{\bf Integration testing:} individual software modules are combined and tested as a group. 
+		This is often done on modules/components that are dependent on each other.
+		
+		{\bf Unit testing:} is testing individual units of code (often one unit test for each method).
+		Often testing that input gives the right output.
+	
+	\clearpage
+	\section{Test Levels}
+				
+		{\bf Security:} In this level will we look at and test the security of the system. 
+		It’s important that the system is safe to use, so we can avoid accidents on humans, 
+		other vehicles, environment etc. This makes this level the most important one in this 
+		test strategy. Tests that will help testing the security is Acceptance tests and system 
+		tests, thus black box testing. Stakeholders in this test level will be customer and 
+		testers.
+
+		{\bf Logical:} The logical test level is focusing on the logical aspects in the system. 
+		This is done by using components test and unit test, so this will be white box and grey 
+		box testing. To test the logical level of the system is important to make sure that the 
+		security is good on a low level. Stakeholders that is important in this test level is 
+		developers and testers.
+
+		{\bf Signal:} The signal test level is focusing on testing that the different components 
+		that sends or receive signals is working satisfactory. Examples is the component measuring 
+		the distance to the car in front,  the component that makes sure the speed isn’t higher 
+		than the setSpeed, etc. This is also a test level that will make sure that the security of 
+		the system is high. To test this we will use components tests and unit tests. We will use 
+		grey box testing for the components and white box testing for the unit testing. Stakeholders 
+		for this test level would be tester.
+		
+		{\bf Hardware:} On this test level is the focus testing that all the hardware is OK 
+ 		and has no defects. This is the lowest level of the testing levels. Because the first 
+ 		thing we have to test before we can do the other test is testing that all the hardware 				
+ 		is running. The test type we will use here is component testing, and since the components 
+ 		comes from external suppliers, this will typically be done as a black box test. 
+ 		Stakeholders for this test level is tester. 
+ 					
+	
+	\clearpage
+	\section{Test environment}	
+
+		{\bf Security:} The testing environment at a security level needs to be as realistic 
+		as possible. At this test level we need at least two cars, a driving lane with two tracks 
+		and a speedometer to track the physical speed of the cars. For the testing we also need
+		an experienced test driver. 
+
+		{\bf Logical:} At a logical level we only need a simulation of the ACC system, only a pc 
+		is required.
+				
+		{\bf Signal:} At this level, we need to have a simulation of the ACC system as well as all
+		the sensors and controllers.
+
+		{\bf Hardware:} For this testing level we need all the hardware of the ACC system.
+
+	\section{Documentation}
+
+		\begin{itemize}
+			\item {\bf Security:} ISO standard for security and ACC system
+			\item {\bf Logical:} Input type required from signal level and 
+			description of all signals
+			\item {\bf Signal:} Format type for each signal type and a mapping 
+			from signal to hardware.
+ 			\item {\bf Hardware:} Components used in each car type, component 
+ 			suppliers and all Hardware spesificatons.
+ 		\end{itemize}
+
+	\clearpage
+	\section{Completion Criteria}
+
+		\begin{table}[H]
+			\begin{tabular}{ p{2cm} | p{11cm} }
+				\hline
+				{\bf Test Level} & {\bf Completion Criteria} \\ \hline
+				{\bf Security} & 
+					\begin{itemize}
+						\item The ACC system is in the correct state
+ 						\item The physical speed is correct
+						\item The physical distance to other car is correct 
+						\item The ACC system should not cause any damage to persons or physical objects.
+					\end{itemize}
+				\\ \hline
+
+				{\bf Logical} & 
+					\begin{itemize}
+						\item A specified input to a logical component should give the right output.
+						\item Measured speed equals physical speed 
+						\item Measured distance equals physical distance
+					\end{itemize}
+				\\ \hline
+
+				{\bf Signal} &
+				 \begin{itemize}
+						\item A signal should be sent to the correct component
+						\item A signal should be recieved from the correct component
+						\item A signal should be recived/sent with a minimum delay
+						\item Signals are formatted and sent to the logical level with an appropriate format.
+					\end{itemize}
+				\\ \hline
+
+ 				{\bf Hardware} & 
+ 					\begin{itemize}
+						\item No defects are detected at the hardware level
+					\end{itemize}
+ 				\\ \hline
+			\end{tabular}
+		\end{table}

@@ -1,0 +1,46 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{lscape}   % Make a page in landscape format \begin{landscape}
+\usepackage{colortbl} % To color table cells
+\usepackage{color} % Able to change textcolor
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+\usepackage{graphicx} % Able to add pictures
+\usepackage{parskip}  % Separate paragraphs with a blank line
+                      % rather than using indentation
+\usepackage{hyperref} % Support for hyperlinks
+\usepackage[protrusion=true,expansion=true]{microtype} % Improve justification
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{lipsum}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{sidecap}
+\usepackage{appendix}
+\usepackage{fancyhdr}
+\usepackage{changepage}
+\usepackage[margin=1.3in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\newcommand{\gray}{\rowcolor[gray]{.90}}
+
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
+
+\begin{document}
+	\input{frontpage.tex}
+	\clearpage
+	\tableofcontents
+	\clearpage
+	\input{Chapters/introduction.tex}
+	\clearpage
+	\input{Chapters/testStrategy.tex}
+	\clearpage
+	\input{Chapters/testPlan.tex}
+\end{document}
+

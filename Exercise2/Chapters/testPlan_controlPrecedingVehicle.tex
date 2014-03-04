@@ -1,0 +1,144 @@
+\section{Control Preceding Vehicle}
+
+	\begin{enumerate}
+		\item {\bf On the roadway, the distance controller should follow the car laying in 
+		front in the same lane.}
+			\begin{enumerate}[label*=\arabic*.]
+				\item If it’s more than one car in front the ACC system should be able 
+				to determine which car to follow automatically.
+			\end{enumerate}
+		\item {\bf ACC distance controller should react on changes in the driving pattern.}
+			\begin{enumerate}[label*=\arabic*.]
+				\item The car in the front must be in the maximum distance range. 
+			\end{enumerate}
+	\end{enumerate}	
+
+	\clearpage
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 4.1 \\ \hline
+			{\bf Test name} & FollowTheCarLayingInFrontInTheSameLane \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control Preceding Vehicle] \\ \hline
+			{\bf Goal} & Maintain[Follow the car laying in front] \\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 1.} On the roadway, the distance 
+			controller should follow the car laying in front in the same lane. \\ \hline
+			{\bf Description} & Test that the system can hold the distance to the car laying in 
+			front in the same lane. \\ \hline
+			{\bf Stakeholders} & developer, tester\\ \hline
+			{\bf Test type} &  Unit test, Integration test \\ \hline
+			{\bf Pre-conditions} & A car in front, in the same lane.
+			The cars is in motion (speed \textgreater 0 km/h)
+			setDistance \textgreater 0m \&\& setDiatance \textless sensor ran\\ \hline
+			{\bf Input} & setDistance, acctualDistanc \\ \hline
+			{\bf Success criteria(s)} & setDistance == acctualDistance \&\& acctualdistance 
+			= distance to car in the same lane \\ \hline
+			{\bf Stop critera(s)} &  
+				\begin{itemize}
+					\item No car in the same lane.
+					\item setDistance != acctialDistance.
+					\item The car in front is out of range.
+					\item Follows car in different la
+				\end{itemize}\\ \hline
+			{\bf Dependencies} & 4.2\\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 4.2 \\ \hline
+			{\bf Test name} & DetermineWichCarToFollowAutomatically \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control Precedingly Vehicle] \\ \hline
+			{\bf Goal} & Achieve[determine which car to follow]
+			\\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 1.1} If it’s more than one car 
+			in front the ACC system should be able to determine which car to follow 
+			automatically.\\ \hline
+			{\bf Description} & Test the system’s ability to select wich car to 
+			follow automatically.\\ \hline
+			{\bf Stakeholders} & developer, tester\\ \hline
+			{\bf Test type} &  Integration, unit test \\ \hline
+			{\bf Pre-conditions} & Two or more car in front of the test car. \\ \hline
+			{\bf Input} & posistion’s to cars in front. \\ \hline
+			{\bf Success criteria(s)} & If the system starts to follow the first car 
+			in the same lane.\\ \hline
+			{\bf Stop critera(s)} &  
+				\begin{itemize}
+					\item If the system starts to follow a car in a different lane.
+					\item If it’s les than two possible car to follow. 
+				\end{itemize}\\ \hline
+			{\bf Dependencies} & none\\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 4.3 \\ \hline
+			{\bf Test name} & RespondToChangesInDrivingPattern \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control Preceding Vehicle] \\ \hline
+			{\bf Goal} & Maintain[react on changes in the driving pattern] \\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 2.} ACC distance controller should 
+			react on changes in the driving pattern.  \\ \hline
+			{\bf Description} & Test if the distance cotroller is able to follow changes 
+			in driving patteren by other cars.\\ \hline
+			{\bf Stakeholders} & testers, developers \\ \hline
+			{\bf Test type} & unit test, integration test \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item One or more cars on the road.
+					\item setDistance \textgreater 0m
+				\end{itemize}\\ \hline
+			{\bf Input} & setDistance, actualDistance \\ \hline
+			{\bf Success criteria(s)} & 
+				\begin{itemize}
+					\item setDistance = actualDistance
+					\item If new car in front, start following the new car.
+				\end{itemize}\\ \hline
+			{\bf Stop critera(s)} &  
+				\begin{itemize}
+					\item No car to follow
+					\item setDistance != actualDistance in a certain time range
+				\end{itemize}\\ \hline
+			{\bf Dependencies} & 4.4\\ \hline
+		\end{tabular}
+	\end{table}
+
+		\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 4.4 \\ \hline
+			{\bf Test name} & MaintainMaxDistance \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control Preceding Vehicle] \\ \hline
+			{\bf Goal} & Maintain[max distance] \\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 2.1} The car in the front must be in 
+			the maximum distance range. \\ \hline
+			{\bf Description} & Tests that the car in front allways is in the maximum 
+			distance range. \\ \hline
+			{\bf Stakeholders} & Testers, Developer \\ \hline
+			{\bf Test type} & unit test, integration test \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item Is a car in front.
+					\item The test car and the car in front is in motion (speed \textgreater 0 km/h)
+				\end{itemize} \\ \hline
+			{\bf Input} & ActualDistance, maximumDistance \\ \hline
+			{\bf Success criteria(s)} & ActualDistance is in the maximum distance range. \\ \hline
+			{\bf Stop critera(s)} &  
+				\begin{itemize}
+					\item Car in front out of range
+					\item Car in front out of maxumum distance range
+				\end{itemize}\\ \hline
+			{\bf Dependencies} & none\\ \hline
+		\end{tabular}
+	\end{table}

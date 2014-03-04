@@ -1,0 +1,267 @@
+
+\section{System States}
+	\begin{enumerate}
+		\item {\bf ACC system in off state}
+			\begin{enumerate}[label*=\arabic*.]
+				\item Off state can be set from stand-by state or active state, when 
+				the ACC system is turn off, by manually or/and automatically after self test.
+				\item Off state can be set from stand-by state or active state automatically
+				forced by a failure reaction.
+			\end{enumerate}
+		\item {\bf ACC system in stand-by state}
+			\begin{enumerate}[label*=\arabic*.]
+				\item Stand-by state can be reached from off state, manually or/and 
+				automatically after self test.
+				\item Stand-by state can be reached from active state through a human 
+				interface
+					\begin{enumerate}[label*=\arabic*.]
+						\item Breaking by the driver shall deactivate ACC function at least 
+						if the driver initiated brake force demand is higher than the ACC 
+						initiated brake force.
+						\item For type 1a and 2a systems, the stand-by state may be reached
+						from active state when the driver depresses the clutch pedal.
+					\end{enumerate}
+			\end{enumerate}
+		\item {\bf ACC system in active state}
+			\begin{enumerate}[label*=\arabic*.]
+				\item The active state can only be reached from stand-by state via the human
+				interface. 
+				\item The active state should switch between time-gap and set speed control
+				according to the goal “Control basis”.
+			\end{enumerate}
+	\end{enumerate}
+
+\clearpage
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.1 \\ \hline
+			{\bf Test name} & ACC\_off\_TEST\_manual \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states] \\ \hline
+			{\bf Goal} & Achieve [off state When ACC is turned off]\\ \hline
+			{\bf Requirement(s)} to be tested & 
+			{\bf 1.1} Off state can be set from stand-by state or active state, when 
+			the ACC system is turned off, manually \\ \hline
+			{\bf Description} & Test if the ACC system changes when the ACC system is 
+			turned off, manually \\ \hline
+			{\bf Stakeholders} & Tester, Developer \\ \hline
+			{\bf Test type} & Unit test, System test \\ \hline
+			{\bf Pre-conditions} & \\ \hline
+			{\bf Input} & The user turns the ACC system off, via an interface \\ \hline
+			{\bf Success criteria(s)} & ACC is set to OFF state. \\ \hline
+			{\bf Stop critera(s)} & ACC is not set to OFF state. \\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.2 \\ \hline
+			{\bf Test name} & ACC\_off\_TEST\_auto\\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states] \\ \hline
+			{\bf Goal} & Achieve [off state When ACC is turned off ]\\ \hline
+			{\bf Requirement(s)} to be tested & 
+			{\bf 1.1} Off state can be set from stand-by state or active state, when the 
+			ACC system is turned off, automatically after self test.\\ \hline
+			{\bf Description} & Test if the ACC system state changes to off state when 
+			the ACC system is turned off, automatically after self test \\ \hline
+			{\bf Stakeholders} & Tester, Developer \\ \hline
+			{\bf Test type} & Unit test, System test \\ \hline
+			{\bf Pre-conditions} & \\ \hline
+			{\bf Input} & An automatic self test that implies that the ACC should be turned 
+			off \\ \hline
+			{\bf Success criteria(s)} & ACC is set to OFF state.\\ \hline
+			{\bf Stop critera(s)} & ACC is not set to OFF state. \\ \hline
+			{\bf Dependencies} & none\\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.3 \\ \hline
+			{\bf Test name} & ACC\_off\_TEST\_fail\\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states]\\ \hline
+			{\bf Goal} & Achieve [off state By fail recognition]\\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 1.2} Off state can be set 
+			from stand-by state or active state automatically forced by a failure 
+			reaction. \\ \hline
+			{\bf Description} & Test if the ACC is turned OFF if serious errors occur 
+			\\ \hline
+			{\bf Stakeholders} & Tester, Developer \\ \hline
+			{\bf Test type} &  Unit test, System test \\ \hline
+			{\bf Pre-conditions} & The system must be set to OFF from both 
+			ACC\_ON and ACC\_STAND\_BY state. Must be done in different operations.\\ \hline
+			{\bf Input} & Serious system error \\ \hline
+			{\bf Success criteria(s)} & ACC is set to OFF state.\\ \hline
+			{\bf Stop critera(s)} & ACC is not set to OFF state.\\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.4 \\ \hline
+			{\bf Test name} & ACC\_standBy\_TEST\_manually \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states] \\ \hline
+			{\bf Goal} & Achieve[stand-by state from off state]\\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 2.1} Stand-by state can be reached 
+			from off state, manually.\\ \hline
+			{\bf Description} & Test if the ACC system state changes to off state when 
+			the ACC system is turned off, manually\\ \hline
+			{\bf Stakeholders} & Tester, Developer \\ \hline
+			{\bf Test type} & Unit test, System test \\ \hline
+			{\bf Pre-conditions} & The ACC system is in off state \\ \hline
+			{\bf Input} & The user turns the changes the ACC system to stand-by state, 
+			via an interface \\ \hline
+			{\bf Success criteria(s)} & ACC is set to stand-by state. \\ \hline
+			{\bf Stop critera(s)} & ACC is not set to stand-by state.\\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.5 \\ \hline
+			{\bf Test name} & ACC\_standBy\_TEST\_automatically\\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states] \\ \hline
+			{\bf Goal} & Achieve [stand-by state from off state] \\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 2.1} Stand-by state can be reached 
+			from off state, automatically after self test.
+			\\ \hline
+			{\bf Description} & Test if the ACC system state changes to off state when 
+			the ACC system is turned off, automatically after self test. \\ \hline
+			{\bf Stakeholders} & Tester, Developer \\ \hline
+			{\bf Test type} & Unit test, System test \\ \hline
+			{\bf Pre-conditions} & The ACC system is in off state \\ \hline
+			{\bf Input} & An automatic self test that implies that the ACC should be set 
+			in stand-by state \\ \hline
+			{\bf Success criteria(s)} & ACC is set to stand-by state.\\ \hline
+			{\bf Stop critera(s)} & ACC is not set to stand-by state. \\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.6 \\ \hline
+			{\bf Test name} & ACC\_standbyState\_viaBreaking \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states] \\ \hline
+			{\bf Goal} & Achieve [Deactivate when ACC by breaking] \\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 2.2.1} Breaking by the driver shall 
+			deactivate ACC function at least if the driver initiated brake force demand 
+			is higher than the ACC initiated brake force.\\ \hline
+			{\bf Description} & Test if the ACC will turn off automatically if the driver 
+			brakes harder than the applied brake force initiated by the ACC. The driver 
+			must be in control if applying more force than the ACC. \\ \hline
+			{\bf Stakeholders} & Developer\\ \hline
+			{\bf Test type} & Unit test, System test \\ \hline
+			{\bf Pre-conditions} & Car is in motion and driving at speed greater than 10km/h.
+			ACC applies brake force.\\ \hline
+			{\bf Input} & Breaking by the user, with greater force than the ACC \\ \hline
+			{\bf Success criteria(s)} & ACC is set to stand-by state.\\ \hline
+			{\bf Stop critera(s)} & ACC is not set to stand-by state.\\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.7 \\ \hline
+			{\bf Test name} & ACC\_standbyState\_viaClutching \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states] \\ \hline
+			{\bf Goal} & Achieve [Deactivate ACC Driver press clutch] \\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 2.2.2} For type 1a and 2a systems, 
+			the stand-by state may be reached from active state when the driver depresses 
+			the clutch pedal.\\ \hline
+			{\bf Description} & Test if the system reaches the stand-by state via clutching
+			\\ \hline
+			{\bf Stakeholders} & Developer \\ \hline
+			{\bf Test type} & Unit tests \\ \hline
+			{\bf Pre-conditions} & The car is a type 1a or 2a, car is in motion, driving 
+			at speed greater than 10km/h.\\ \hline
+			{\bf Input} & User presses the clutch pedal\\ \hline
+			{\bf Success criteria(s)} & ACC is set to stand-by state. \\ \hline
+			{\bf Stop critera(s)} & ACC is not set to stand-by state.\\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.8 \\ \hline
+			{\bf Test name} & ACC\_activeState\_viaInterface\\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states]\\ \hline
+			{\bf Goal} & Achieve [active state  from human interface] \\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 3.1} The active state can only be 
+			reached from stand-by state via the human interface. \\ \hline
+			{\bf Description} & Test if the ACC system state changes from stand-by state 
+			to active-state when the user interacts via the user interface, that implies 
+			that the system should be set to active-state. \\ \hline
+			{\bf Stakeholders} & Tester, Developer \\ \hline
+			{\bf Test type} & Unit test, System test \\ \hline
+			{\bf Pre-conditions} & The ACC system is in stand-by state \\ \hline
+			{\bf Input} & The user interacts with the user interface, to set the ACC to 
+			active-state \\ \hline
+			{\bf Success criteria(s)} & ACC is set to stand-by state. \\ \hline
+			{\bf Stop critera(s)} & ACC is not set to stand-by state. \\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 2.9 \\ \hline
+			{\bf Test name} & ACC\_activeState\_ControlBasis\\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[System states]\\ \hline
+			{\bf Goal} & Achieve [state according to "Control basis"]\\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 3.2} The active state should switch 
+			between time-gap and set speed control according to the goal “Control basis”.
+			\\ \hline
+			{\bf Description} & Test if the active-state switches between time-gap and 
+			set-speed control, according to the “Control basis” goal. \\ \hline
+			{\bf Stakeholders} & Tester, Developer \\ \hline
+			{\bf Test type} & Unit test, System test\\ \hline
+			{\bf Pre-conditions} & \begin{itemize} 
+			\item The ACC system is in active-state
+			\item The car in front is in reach of the distance sensor
+			\item Both cars are in motions 
+			\end{itemize} \\ \hline
+			{\bf Input} & measuredSpeed, measuredDistance \\ \hline
+			{\bf Success criteria(s)} & The inner states in active-state are set according 
+			to the “Control basis” goal\\ \hline
+			{\bf Stop critera(s)} & The inner states in active-state aren’t set according 
+			to the “Control basis” goal\\ \hline
+			{\bf Dependencies} & {\bf \color{red} All the tests in “Control basis”} \\ \hline
+		\end{tabular}
+	\end{table}
+
+	

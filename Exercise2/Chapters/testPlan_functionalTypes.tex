@@ -1,0 +1,64 @@
+\section{Functional Types}
+
+	\begin{enumerate}
+		\item {\bf Type 1a: Manual clutch operation, no active brake control}
+		\item {\bf Type 1b: No manual clutch operation, no active brake control}
+		\item {\bf Type 2a: Manual clutch operation, active brake control}
+			\begin{enumerate}[label*=\arabic*.]
+				\item The driver shall be informed clearly and early about a potential 
+				conflict between brake and engine idle control. 
+			\end{enumerate}
+		\item {\bf Type 2b: Active brake control}
+	\end{enumerate}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline \rowcolor{gray}
+			{\bf Test ID} & 3.1 \\ \hline
+			{\bf Test name} & AccelerationWithManualClutchOperation \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Functional Types] \\ \hline
+			{\bf Goal} & Achieve [Type 1b: manual clutch operation] \\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 1.} Type 1a: Manual clutch operation, no active brake control\\ \hline
+			{\bf Description} & Test if the ACC system accelerates if there is a manual clutch 
+			operation and the speed is lower than the set speed. \\ \hline
+			{\bf Stakeholders} & Developers and testers \\ \hline
+			{\bf Test type} &  Unit, system and integration testing \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item The ACC system is on
+					\item The speed is lower than the set speed
+					\item There is a manual clutch action
+				\end{itemize}\\ \hline
+			{\bf Input} & \\ \hline
+			{\bf Success criteria(s)} & Accelerate up to the set speed\\ \hline
+			{\bf Stop critera(s)} &  \\ \hline
+			{\bf Dependencies} & 1.2\\ \hline
+		\end{tabular}
+	\end{table}
+
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline \rowcolor{gray}
+			{\bf Test ID} & 3.2 \\ \hline
+			{\bf Test name} & type2aCar\_breakAndIdleControlConflict \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Functional Types]\\ \hline
+			{\bf Goal} & Maintain [Notify driver if brakeforce will exceed engine idle control]\\ \hline
+			{\bf Requirement(s)} to be tested & {\bf 3.1} The driver shall be informed clearly and early about a potential conflict between brake and engine idle control.\\ \hline
+			{\bf Description} & Test if the driver is informed, clearly and early, about a potential conflict between break and engine idle control.\\ \hline
+			{\bf Stakeholders} & Developer, end-user \\ \hline
+			{\bf Test type} &  Component test \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item The car is of type 2a
+					\item Car is in motion (speed \textgreater 0 km/h)
+					\item Clutch pedal is not applied
+				\end{itemize}\\ \hline
+			{\bf Input} & brake\_force, conflict between break and engine idle control \\ \hline
+			{\bf Success criteria(s)} & The driver is informed, clearly and early, about the potential conflict \\ \hline
+			{\bf Stop critera(s)} &  The driver isn’t informed, clearly and early, about the potential conflict \\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}

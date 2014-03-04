@@ -1,0 +1,285 @@
+\section{Control Basis}
+
+	\begin{enumerate}
+		\item {\bf Keep the time gap to the car in front automatically}
+			\begin{enumerate}[label*=\arabic*.]
+				\item The ACC system shall be able to calculate the distance to 
+				the preceding vehicle.
+					\begin{enumerate}[label*=\arabic*.]
+						\item The distance measured by the ACC system should be the same 
+						as the physical distance.
+					\end{enumerate}
+				\item The ACC should be able to maintain the speed according to keep the
+				distance to the car in front.
+			\end{enumerate}
+		\item {\bf Maintain the set speed automatically}
+			\begin{enumerate}[label*=\arabic*.]
+				\item The ACC system shall be able to determine the speed of the
+				subject vehicle.
+					\begin{enumerate}[label*=\arabic*.]
+						\item The ACC vehicle’s measured speed shall be the same
+						as the physical speed.
+					\end{enumerate}
+				\item The ACC should be able to set the speed according to maintain the 
+				set speed.
+			\end{enumerate}
+		\item {\bf Change automatically between time gap control and set speed control, 
+		to which is lower.}
+	\end{enumerate}
+
+\clearpage
+
+\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+		\hline
+		\rowcolor{gray}
+			{\bf Test ID} & 1.1 \\ \hline
+			{\bf Test name} & KeepMeasuredAndPhysicalDistanceEqual\\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control basis]\\ \hline
+			{\bf Goal} & Measured Distance = Physical Distance\\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 1.1.1} The distance measured by the 
+			ACC system should be the same as the physical distance.\\ \hline
+			{\bf Description} & Tests if the measured distance between the car carrying 
+			the ACC system and the car in front is the actual physical distance\\ \hline
+			{\bf Stakeholders} & Developer, tester\\ \hline
+			{\bf Test type} &  Component test, Unit test \\ \hline
+			{\bf Pre-conditions} & The car in front is in reach of the sensors \\ \hline
+			{\bf Input} & PyshicalDistance, MeasuredDistance \\ \hline
+			{\bf Success criteria(s)} & PhysicalDistance = MeasuredDistance \\ \hline
+			{\bf Stop critera(s)} &  
+				\begin{itemize}
+					\item Car in front goes out of reach. 
+					\item There is no car in front.
+				\end{itemize} \\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+		\hline
+		\rowcolor{gray}
+			\hline
+			{\bf Test ID} & 1.2 \\ \hline
+			{\bf Test name} & SpeedAccordingToTheDistanceToTheCarInFront \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control Basis] \\ \hline
+			{\bf Goal} & Maintain[Speed according to the distance to the car in front] 
+			\\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 1.2} The ACC should be able to 
+			maintain the speed according to keep the distance to the car in front. 
+			\\ \hline
+			{\bf Description} & Test if the ACC system is able to adjust speed according 
+			to the car in front. Shall adjust speed both when speeding and when slowing down, 
+			but never go over the speed limit.\\ \hline
+			{\bf Stakeholders} & Developer, Tester\\ \hline
+			{\bf Test type} &  Unit, integration \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item The cars (the car with the ACC system and the registered car in front) 
+					is driving at speed greater than 0 km/h
+					\item There is registered a car in front
+					\item SensorRange > SetDistance >= safeDistance 
+				\end{itemize} \\ \hline
+			{\bf Input} & MeasuredDistance, SetDistance\\ \hline
+			{\bf Success criteria(s)}& MeasuredDistance = SetDistance\\ \hline
+			{\bf Stop critera(s)} &  
+				\begin{itemize}
+					\item Car in front comes is closer than safeDistance
+					\item Car in front goes out of reach for a long period of time
+				\end{itemize}\\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+		\hline
+		\rowcolor{gray}
+			\hline
+			\rowcolor{gray}
+			{\bf Test ID} & 1.3 \\ \hline
+			{\bf Test name} & KeepTimeGapAuto \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control Basis] \\ \hline
+			{\bf Goal} & Maintain[Maintain time gap] \\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 1.} Keep the time gap to the car 
+			in front automatically\\ \hline
+			{\bf Description} & Test that the car keeps the time gap to the car in 
+			front automatically\\ \hline
+			{\bf Stakeholders} & Testers\\ \hline
+			{\bf Test type} &  Unit testing, Integration testing \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item The car in front is in reach of the sensor 
+					\item Car is in motion.
+					\item SetSpeed > 0 km/h
+				\end{itemize}\\ \hline
+			{\bf Input} & PyshicalDistance, MeasuredDistance and SetDistance\\ \hline
+			{\bf Success criteria(s)}& The car manages to hold the time gap to the car 
+			in the front\\ \hline
+			{\bf Stop critera(s)} &  
+				\begin{itemize}
+					\item Car in front goes out of reach for a long period of time
+					\item Car in front comes is closer than safeDistance
+				\end{itemize}\\ \hline
+			{\bf Dependencies} & 1.1 and 1.2\\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+		\hline
+		\rowcolor{gray}
+			\hline
+			{\bf Test ID} & 1.4 \\ \hline
+			{\bf Test name} & MaintainTheSetSpeedAutomatically\\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control basis] \\ \hline
+			{\bf Goal} & Maintain [Maintain the set speed]\\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 2.} Maintain the set speed automatically.\\ \hline
+			{\bf Description} & Test that the car can hold the predefined speed 
+			automatically. \\ \hline
+			{\bf Stakeholders} & Testers \\ \hline
+			{\bf Test type} &  Integration testing\\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item The car is in motion (speed \textgreater  0 km/h)
+					\item SetSpeed \textgreater 0 km/h
+				\end{itemize}\\ \hline
+			{\bf Input} & MeasuredSpeed, ActualSpeed, SetSpeed\\ \hline
+			{\bf Success criteria(s)}& SetSpeed = ActualSpeed \&\& 
+			MeasuredSpeed = ActualSpeed\\ \hline
+			{\bf Stop critera(s)} &  ActualSpeed != SetSpeed OR
+			ActualSpeed != MeasuredSpeed\\ \hline
+			{\bf Dependencies} & 1.5 and 1.6 \\ \hline
+		\end{tabular}
+	\end{table}
+
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+		\hline
+		\rowcolor{gray}
+			\hline
+			{\bf Test ID} & 1.5 \\ \hline
+			{\bf Test name} & EqualMeasuredAndPhysicalSpeed \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control Basis] \\ \hline
+			{\bf Goal} & Measured speed = Physical speed \\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 2.1.1} The ACC vehicle’s measured 
+			speed shall be the same as the physical speed.\\ \hline
+			{\bf Description} & Test that the measured speed of the car is equal to 
+			the actual speed of the car.\\ \hline
+			{\bf Stakeholders} & Developers \\ \hline
+			{\bf Test type} &  Component test, Unit test\\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item Car is in motion (speed \textgreater 0km/h)
+					\item SetSpeed \textgreater 0 km/h.
+				\end{itemize}\\ \hline
+			{\bf Input} & MeasuredSpeed, ActualSpeed \\ \hline
+			{\bf Success criteria(s)}&  MeasuredSpeed = ActualSpeed \\ \hline
+			{\bf Stop critera(s)} &  MeasuredSpeed != ActualSpeed\\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+		\hline
+		\rowcolor{gray}
+			\hline
+			{\bf Test ID} & 1.6 \\ \hline
+			{\bf Test name} & MaintainTheSetSpeed \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control basis] \\ \hline
+			{\bf Goal} & Maintain [Speed to the set speed] \\ \hline
+			{\bf Requirement(s) to be tested} & {\bf 2.2} The ACC should be able to 
+			set the speed according to maintain the setspeed.\\ \hline
+			{\bf Description} & Test that the car maintains the speed that is set \\ \hline
+			{\bf Stakeholders} & Developers\\ \hline
+			{\bf Test type} & Component test, Unit test \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item The car is in motion (speed \textgreater 0km/h)
+					\item No car in front 
+					\item SetSpeed \textgreater 0 km/h
+				\end{itemize} \\ \hline
+			{\bf Input} & MeasuredSpeed, SetSpeed \\ \hline
+			{\bf Success criteria(s)}& MeasuredSpeed = SetSpeed \\ \hline
+			{\bf Stop critera(s)} &  MeasuredSpeed != SetSpeed \\ \hline
+			{\bf Dependencies} & none\\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+		\hline
+		\rowcolor{gray}
+			\hline
+			{\bf Test ID} & 1.7 \\ \hline
+			{\bf Test name} & ChangeAutomaticallyFromSpeedToTimeGapControl \\ \hline
+			{\bf System to be tested} & ACC1.1 \\ \hline
+			{\bf Main goal} & Maintain[Control Basis] \\ \hline
+			{\bf Goal} & Achieve [Change betweentime gap and set speed to which is lower] 
+			\\ \hline
+			{\bf Requirement(s) to be tested} & Change automatically from set speed control 
+			to time gap control. \\ \hline
+			{\bf Description} & Test that the car is able to switch from set speed to time 
+			gap control automatically. \\ \hline
+			{\bf Stakeholders} & Developer \\ \hline
+			{\bf Test type} &  Integration test \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize} 
+					\item The car in front is in reach of the distance sensor
+					\item Both cars are in motions
+					\item ACC system is in active-set-speed state
+					\item The distance to front car should imply that the state is 
+					in active-set-speed state
+				\end{itemize}\\ \hline
+			{\bf Input} & MeasuredSpeed, MeasuredDistance, Frontcar\_slows\_down \\ \hline
+			{\bf Success criteria(s)}& The car manages to switch from speed control to time 
+			gap control automatically \\ \hline
+			{\bf Stop critera(s)} & The car fails to switch from speed control to time gap 
+			control automatically \\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabular}{| p{4cm} | p{10cm} |}
+		\hline
+		\rowcolor{gray}
+			\hline
+			{\bf Test ID} & 1.8 \\ \hline
+			{\bf Test name} & ChangeAutomaticallyFromTimeGapToSpeedControl \\ \hline
+			{\bf System to be tested} & ACC1.1\\ \hline
+			{\bf Main goal} & Maintain[Control Basis] \\ \hline
+			{\bf Goal} & Achieve[Change between time gap and set speed to which is lower] 
+			\\ \hline
+			{\bf Requirement(s) to be tested} & Change automatically from time gap control 
+			to speed control. \\ \hline
+			{\bf Description} & Test that the car is able to switch from time gap to speed 
+			control automatically. \\ \hline
+			{\bf Stakeholders} & Developer \\ \hline
+			{\bf Test type} & Integration test \\ \hline
+			{\bf Pre-conditions} & 
+				\begin{itemize}
+					\item The car in front is in reach of the distance sensor
+					\item Both cars are in motions
+					\item ACC system is in active-time-gap state
+					\item The distance to front car should imply that the state is in 
+					active-time-gap state
+				\end{itemize}\\ \hline
+			{\bf Input} & MeasuredSpeed, MeasuredDistance, Frontcar\_s
+			slows\_down \\ \hline
+			{\bf Success criteria(s)}& The car manages to switch from time gap control to 
+			set speed control automatically
+			\\ \hline
+			{\bf Stop critera(s)} & The car fails to switch from time gap control to set 
+			speed control automatically \\ \hline
+			{\bf Dependencies} & none \\ \hline
+		\end{tabular}
+	\end{table}
