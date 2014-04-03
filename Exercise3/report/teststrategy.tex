@@ -1,0 +1,50 @@
+\chapter{Test Strategy}
+
+	\clearpage
+
+	{\bf What’s being tested?} In this system we have chosen to do  an unit test, 
+	an integration test and a system test. 
+	These tests covers almost the whole area of the system, especially data, without adding 
+	or changing the codebase.
+
+	We’ll derive a short plan for unit testing level and integration testing level, further 
+	we’ll make a more detailed plan for the system testing level. The plan for system testing 
+	will include a test set, based on the use cases and risk assessment. These tests will be 
+	executed, and the result will be the basis for our conclusion whether to ship or not to 
+	ship the system.
+
+	{\bf Test Types:}
+		\begin{itemize}
+			\item {\bf System testing:} is done by testing a complete, integrated system to 
+			evaluate the system's compliance with its specified requirements. We don’t need 
+			any knowledge og the source code or the logic behind it.
+			\item {\bf Integration testing:} individual software modules are combined and tested as a group. 
+			This is often done on modules/components that are dependent on each other. 
+			\item {\bf Unit testing:} is testing individual units of code (often one unit test for each method). 
+			Often testing that input gives the right output. 
+		\end{itemize}
+
+	When performing the tests we have based our test plan on the test sets given below. The test sets covers system test, integration tests and unit tests. We plan on performing the system and integration tests using the black box technique. For the unit tests we plan on using a white box technique. 
+
+	{\bf Criteria for test completion:}
+		\begin{itemize}
+			\item {\bf System testing:} For a successful system test every input should give the equally right 
+			output, and it should be shown in the user interface of the system. 
+			\item {\bf Integration testing:} For a successful integration test the different modules in the 
+			system are combined into suitable groups and tested for every input that gives the right output.  
+			\item {\bf Unit testing:} The test is successful if the different units of the system gives the 
+			right output on the different inputs that are given. 
+		\end{itemize}
+
+	{\bf Test environment}
+
+	To be able to test the SoCam system there is no need in fancy equipment or room. The only thing we need 
+	is a PC with the necessary software installed and a test user to test the program with.
+
+	{\bf Risk Assessment tests}
+
+	In the following section we describes different tests based on the different written use cases. 
+	They are arranged after <scenario??> and are rated with values from low to high as in the section 
+	about risk assessments. 
+
+

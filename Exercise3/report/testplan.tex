@@ -1,0 +1,231 @@
+\chapter{Test Plan}
+
+\clearpage
+
+		\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 1 \\ \hline
+				{\bf Test name} & addNewSWComponent \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 1.1, 2.1 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item Enter invalid SWComponent.
+						\item Enter already existing SWComponent.
+						\item Enter legal SWComponent.
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & \\ \hline
+				{\bf Pre-conditions} & A new software component is created by the 
+				SW department\\ \hline
+				{\bf Input} & 
+					\begin{enumerate}
+						\item invalid SWComponent
+						\item existing SWComponent
+						\item valid SWComponent
+					\end{enumerate}
+				\\ \hline
+				{\bf Success criteria(s)} & 
+					\begin{enumerate}
+						\item Invalid SWComponent gives an error.
+						\item Exsisting SWComponent gives an error.
+						\item Legal SWComponent entered to system and uploaded to archive.
+					\end{enumerate}
+				\\ \hline
+				{\bf Stop critera(s)} &  
+					\begin{enumerate}
+						\item Invalid SWComponent is entered to system and uploaded to archive.
+						\item Exsisting SWComponent is entered to system and uploaded to archive.
+						\item Leadl SWComponent fails.
+					\end{enumerate} \\ \hline
+				{\bf Dependencies} & \\ \hline
+			\end{tabular}
+		\end{table}
+
+		\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 2 \\ \hline
+				{\bf Test name} & uploadNewActionScriptToActionDB \\ \hline
+				{\bf System to be tested} & SoCam\\ \hline
+				{\bf Requirement(s) to be tested} & 1.2, 2.2, 4.1.1, 4.1.2 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item Tests that the actionscript is valid, and that it is 
+						uploaded to the actionDB
+						\item Tests that an invalid actionscript is rejected by the system
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & \\ \hline
+				{\bf Pre-conditions} & A new SW component is uploaded to the SW archive \\ \hline
+				{\bf Input} & 
+					\begin{enumerate}
+						\item The actionscript
+						\item An invalid actionscript
+					\end{enumerate}
+				\\ \hline
+				{\bf Success criteria(s)} & 
+					\begin{enumerate}
+						\item The actionscript is uploaded to the actionDB
+						\item The invalid actionscript is rejected by the system, and not uploaded
+					\end{enumerate}
+				\\ \hline
+				{\bf Stop critera(s)} &  
+					\begin{enumerate}
+						\item The invalid actionscript is uploaded
+					\end{enumerate} \\ \hline
+				{\bf Dependencies} & Test ID 1 \\ \hline
+			\end{tabular}
+		\end{table}
+
+				\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 3 \\ \hline
+				{\bf Test name} & SendListToGarage \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 2.3 \\ \hline
+				{\bf Description} & Send list to garage
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & System test \\ \hline
+				{\bf Pre-conditions} & A new component i registered and the actionDB is updated. 
+				\\ \hline
+				{\bf Input} & A list of car owners \\ \hline
+				{\bf Success criteria(s)} & The list is received by the garage
+				\\ \hline
+				{\bf Stop critera(s)} &  The list is not received by the garage. \\ \hline
+				{\bf Dependencies} & Test ID 1 and 2 \\ \hline
+			\end{tabular}
+		\end{table}
+
+		\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 4 \\ \hline
+				{\bf Test name} & FindRegisteredOwner\\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} &  \\ \hline
+				{\bf Description} & Check if you can search for a owner based 
+				on a car ID \\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & System test \\ \hline
+				{\bf Pre-conditions} & Logged into the garage system and 
+				customers are registered.\\ \hline
+				{\bf Input} & Car ID \\ \hline
+				{\bf Success criteria(s)} & The owner is found \\ \hline
+				{\bf Stop critera(s)} & The owner is not found \\ \hline
+				{\bf Dependencies} & None \\ \hline
+			\end{tabular}
+		\end{table}
+
+		\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 5 \\ \hline
+				{\bf Test name} & SendEmailToOwners \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 2.5 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item send email to a customer.
+						\item check if email is received.
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & System test \\ \hline
+				{\bf Pre-conditions} & logged in to the garage system \\ \hline
+				{\bf Input} & a text to send \\ \hline
+				{\bf Success criteria(s)} & 
+					\begin{enumerate}
+						\item email is sent from garage.
+						\item email is received by customer
+					\end{enumerate}
+				\\ \hline
+				{\bf Stop critera(s)} &  
+					\begin{enumerate}
+						\item email is not sent from garage.
+						\item email is not  received by customer
+					\end{enumerate} \\ \hline
+				{\bf Dependencies} & None\\ \hline
+			\end{tabular}
+		\end{table}
+
+				\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 6 \\ \hline
+				{\bf Test name} & AddNewSeriesOfVechicalToDB \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 4.2.1 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item Add new series with invalid parameters.
+						\item Add new series with valid parameters.
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & System test \\ \hline
+				{\bf Pre-conditions} & logged in to the factory system \\ \hline
+				{\bf Input} & 
+					\begin{enumerate}
+						\item vehicle serie with valid parameters
+						\item vehicle serie with invalid parameters
+					\end{enumerate}
+				\\ \hline
+				{\bf Success criteria(s)} & 
+					\begin{enumerate}
+						\item vehicle series with valid parameters is accepted
+						\item vehicle series with invalid parameters is not accepted
+					\end{enumerate}
+				\\ \hline
+				{\bf Stop critera(s)} &  
+					\begin{enumerate}
+						\item vehicle series with valid parameters is not accepted
+						\item vehicle series with invalid parameters is accepted
+					\end{enumerate} \\ \hline
+				{\bf Dependencies} & \\ \hline
+			\end{tabular}
+		\end{table}
+
+				\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 7 \\ \hline
+				{\bf Test name} & AddNewVehicleToProductionSeriesInDB \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 4.3.1 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item Add new vehicle with invalid parameters.
+						\item Add new vehicle with valid parameters.
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & System test \\ \hline
+				{\bf Pre-conditions} & logged in to the factory system \\ \hline
+				{\bf Input} & new vehicle \\ \hline
+				{\bf Success criteria(s)} & 
+					\begin{enumerate}
+						\item The vehicle with valid parameters is accepted
+						\item The vehicle with the invalid parameters is denied 
+					\end{enumerate}
+				\\ \hline
+				{\bf Stop critera(s)} &  
+					\begin{enumerate}
+						\item The vehicle with valid parameters is denied 
+						\item The vehicle with the invalid parameters is accepted
+					\end{enumerate} \\ \hline
+				{\bf Dependencies} & \\ \hline
+			\end{tabular}
+		\end{table}
