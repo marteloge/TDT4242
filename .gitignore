@@ -12,3 +12,8 @@
 *.blg
 main.pdf
 *synctex.gz
+
+#Java shit
+
+*.classpath
+*.project
