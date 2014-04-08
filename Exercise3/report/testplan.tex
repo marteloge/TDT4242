@@ -229,3 +229,133 @@
 				{\bf Dependencies} & \\ \hline
 			\end{tabular}
 		\end{table}
+
+	
+
+\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 8 \\ \hline
+				{\bf Test name} & identifyVehicleSerialNumber \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 8 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & Unit, integration \\ \hline
+				{\bf Pre-conditions} & 
+					\begin{enumerate}
+						\item The configuration info is downloaded from the 
+						vehicles master computer
+						\item The GP have access to the local system
+					\end{enumerate} \\ \hline
+				{\bf Input} & The name of the vehicles owner \\ \hline
+				{\bf Success criteria(s)} & Recieve the vehicles serial number \\ \hline
+				{\bf Stop critera(s)} &  The serial number is not found \\ \hline
+				{\bf Dependencies} & \\ \hline
+			\end{tabular}
+		\end{table}
+
+	\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 9 \\ \hline
+				{\bf Test name} & downloadLatestSoftwareUpdate \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 6 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & Unit, integration \\ \hline
+				{\bf Pre-conditions} & 
+					\begin{enumerate}
+						\item There is a connection between the local and the central system
+						\item The vehicles serial number is found in the system
+					\end{enumerate}\\ \hline
+				{\bf Input} &  Vechiles serial number \\ \hline
+				{\bf Success criteria(s)} & 
+					\begin{enumerate}
+						\item Recive configuration info for both hardware and software
+						\item Recives the history log
+					\end{enumerate}
+				\\ \hline
+				{\bf Stop critera(s)} &  
+					\begin{enumerate}
+						\item No configuration info and history log is found
+						\item No connection to the central system
+					\end{enumerate} \\ \hline
+				{\bf Dependencies} & Test ID 8 \\ \hline
+			\end{tabular}
+		\end{table}
+
+		\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 10 \\ \hline
+				{\bf Test name} & updtaeVeheicleMasterComputer \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 6 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item 
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & Unit, integration \\ \hline
+				{\bf Pre-conditions} & All updates are downloaded from the central system \\ \hline
+				{\bf Input} & 
+					\begin{enumerate}
+						\item History log
+						\item Configuration info
+					\end{enumerate}
+				\\ \hline
+				{\bf Success criteria(s)} &  All software updates are downloaded from the central system 
+						to the local system \\ \hline
+				{\bf Stop critera(s)} &  The software updates was not downloaded to the 
+					local system \\ \hline
+				{\bf Dependencies} & Test ID 9 \\ \hline
+			\end{tabular}
+		\end{table}
+
+		\begin{table}[H]
+			\begin{tabular}{| p{4cm} | p{10cm} |}
+			\hline
+			\rowcolor{gray}
+				{\bf Test ID} & 11 \\ \hline
+				{\bf Test name} & updateVehicleConfigurationInfo \\ \hline
+				{\bf System to be tested} & SoCam \\ \hline
+				{\bf Requirement(s) to be tested} & 7 \\ \hline
+				{\bf Description} & 
+					\begin{enumerate}
+						\item
+					\end{enumerate}
+				\\ \hline
+				{\bf Stakeholders} & Developer, User \\ \hline
+				{\bf Test type} & unit \\ \hline
+				{\bf Pre-conditions} & \\ \hline
+				{\bf Input} & Software updates \\ \hline
+				{\bf Success criteria(s)} & 
+					\begin{enumerate}
+						\item The new software updates are successfully downloaded to
+						the vehicles master computer.
+						\item Vehicles configuration info is updated in the central system
+					\end{enumerate}
+				\\ \hline
+				{\bf Stop critera(s)} &  
+					\begin{enumerate}
+						\item The software updates was not successfully updates in the vehicles
+						master computer
+						\item The vehicles configuration info was not updated in the central system
+					\end{enumerate} \\ \hline
+				{\bf Dependencies} & Test ID 10 \\ \hline
+			\end{tabular}
+		\end{table}
