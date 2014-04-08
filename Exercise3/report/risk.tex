@@ -22,7 +22,7 @@
 	\section{Scenario 1}
 			\begin{longtable}{ c | p{5cm} | p{5cm} | p{5cm} | c | c | c}
 				\hline
-				{\bf Test ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
+				{\bf ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
 				{\bf User.} & {\bf Cust.} & {\bf Dev.} \\ \hline
 				1.1 
 				& CM enters the new SW component to the system and uploads it to the SW archive
@@ -38,7 +38,7 @@
 
 			\begin{longtable}{ c | p{5cm} | p{5cm} | p{5cm} | c | c | c}
 				\hline
-				{\bf Test ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
+				{\bf ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
 				{\bf User.} & {\bf Cust.} & {\bf Dev.} \\ \hline
 				2.1 
 				& CM adds new software to the archive
@@ -73,27 +73,22 @@
 		\begin{table}[H]
 			\begin{tabular}{ c | p{5cm} | p{5cm} | p{5cm} | c | c | c}
 				\hline
-				{\bf Test ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
+				{\bf ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
 				{\bf User.} & {\bf Cust.} & {\bf Dev.} \\ \hline
-				x 
-				& GP reads the current configuration info from the vehicle  DB 
-				& Could not read the configuration info 
-				& Not implemented 
-				& Med & Med & Med \\ \hline
-				x 
+				3.1 
 				& GP identifies the vehicle serial number
 				based on the RO's name.  
 				& No match on the RO's name in the databse
 				& ProjectPanel, SearchPersonAction 
 				& Med & Med & Med \\ \hline
-				x 
+				3.2
 				& GP downloads the latest version of software
 				from the software archive 
 				& Could not find the lastest version of software
 				in the software archive.
 				& ProjectPanel, VehiclePanel, Vehicle, VehicleDBStorage, GUIConnect, garageConnection
 				& High & Low & Med \\ \hline
-				x 
+				3.3 
 				& GP updates the vehicles master computer with
 				the latest version of software from the Software
 				archive 
@@ -102,7 +97,7 @@
 				& ProjectPanel, Connection, GUIConnect, 
 				VehiclePanel, Vehicle
 				& Low & Low & Low \\ \hline
-				x 
+				3.4 
 				& GP updates the vehicles configuration info 
 				in the vehicle DB. 
 				& The configuration info was not updated.
@@ -118,7 +113,7 @@
 		\begin{table}[H]
 			\begin{tabular}{ c | p{5cm} | p{5cm} | p{5cm} | c | c | c}
 				\hline
-				{\bf Test ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
+				{\bf ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
 				{\bf User.} & {\bf Cust.} & {\bf Dev.} \\ \hline
 				4.1
 				& CM adds a new actionscript to the action database
