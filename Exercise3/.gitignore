@@ -15,3 +15,5 @@ main.pdf
 
 *.idea
 *.class
+*.project
+*.classpath
