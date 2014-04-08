@@ -23,15 +23,16 @@
 			\begin{longtable}{ c | p{5cm} | p{5cm} | p{5cm} | c | c | c}
 				\hline
 				{\bf ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
-				{\bf User.} & {\bf Cust.} & {\bf Dev.} \\ \hline
+				{\bf Cons.} & {\bf Prob.} & {\bf Tot.} \\ \hline
 				1.1 
 				& CM enters the new SW component to the system and uploads it to the SW archive
 				& CM enters invalid component & FactoryProjectPane, FactoryProject
-				& High & High & High \\ \hline
+				& High & Med & High \\ \hline
 				1.2 
 				& CM adds the new actionscript and uploads it to the Action DB
 				& CM enters invalid actionscript
-				& FactoryProjectPane, FactoryProject & Med & High & Med \\ \hline
+				& FactoryProjectPane, FactoryProject 
+				& High & Med & High \\ \hline
 		\end{longtable}	
 
 	\section{Scenario 2}
@@ -39,7 +40,7 @@
 			\begin{longtable}{ c | p{5cm} | p{5cm} | p{5cm} | c | c | c}
 				\hline
 				{\bf ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
-				{\bf User.} & {\bf Cust.} & {\bf Dev.} \\ \hline
+				{\bf Cons.} & {\bf Prob.} & {\bf Tot.} \\ \hline
 				2.1 
 				& CM adds new software to the archive
 				& The software already exist. 
@@ -49,22 +50,22 @@
 				& CM update actionscript database
 				& Invalid actionscript
 				& FactoryDBStorage, CreateFactoryDB
-				& Med & High & Med \\ \hline
+				& High & Med & High \\ \hline
 				2.3
 				& List of vehicles is send to all registered garage.
 				& The garage do not receive the list.
 				& FactoryProjectPanel, RecallPanell
-				& Low & Med & Med \\ \hline
+				& High & Med & High \\ \hline
 				2.4
 				& Garage employee identifies relevant car owners.
 				& The car has no registered owner
 				& ProjectPanel, RecallPanel, PersonPanel, PersonListModel
-				& High & Med & Low \\ \hline
+				& Med & Low & Low \\ \hline
 				2.5
 				& System sends email to all relevant car owners.
 				& Email is not sendt, Sendt email is not received
 				& ProjectPanel, RecallPanel, PersonPanel
-				& High & Med & Med \\ \hline
+				& Med & Med & Med \\ \hline
 			
 		\end{longtable}
 
@@ -74,20 +75,20 @@
 			\begin{tabular}{ c | p{5cm} | p{5cm} | p{5cm} | c | c | c}
 				\hline
 				{\bf ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
-				{\bf User.} & {\bf Cust.} & {\bf Dev.} \\ \hline
+				{\bf Cons.} & {\bf Prob.} & {\bf Tot.} \\ \hline
 				3.1 
 				& GP identifies the vehicle serial number
 				based on the RO's name.  
 				& No match on the RO's name in the databse
 				& ProjectPanel, SearchPersonAction 
-				& Med & Med & Med \\ \hline
+				& Low & Med & Med \\ \hline
 				3.2
 				& GP downloads the latest version of software
 				from the software archive 
 				& Could not find the lastest version of software
 				in the software archive.
 				& ProjectPanel, VehiclePanel, Vehicle, VehicleDBStorage, GUIConnect, garageConnection
-				& High & Low & Med \\ \hline
+				& Med & Low & Low \\ \hline
 				3.3 
 				& GP updates the vehicles master computer with
 				the latest version of software from the Software
@@ -114,23 +115,23 @@
 			\begin{tabular}{ c | p{5cm} | p{5cm} | p{5cm} | c | c | c}
 				\hline
 				{\bf ID} & {\bf Function} & {\bf Failure mode} & {\bf Code involved} & 
-				{\bf User.} & {\bf Cust.} & {\bf Dev.} \\ \hline
+				{\bf Cons.} & {\bf Prob.} & {\bf Tot.} \\ \hline
 				4.1
 				& CM adds a new actionscript to the action database
 				& CM adds a invalid action script
 				& FactoryProjectPanel, EcuVehPanel, Ecu, Software, SimpleEcu, EcuDbStorage
 				SoftwareDbStorage
-				& Med & Low & Med \\ \hline
+				& High & Med & High \\ \hline
 				4.2
 				& CM adds the new serie of vehicle to the vehicle database
 				& Parameters given when adding the new series is not valid
 				& FactoryProjectPanel, NewVehiclePanel, Vehicle, VehicleDBStorage
-				& Med & Low & Med \\ \hline
+				& Med & Low & Low \\ \hline
 				4.3
 				& FP adds a new vehicle to the vehicle production series in the vehicle database
 				& Parameters given when adding the new vehicle is not valid
 				& FactoryProjectPanel, NewVehiclePanel, Vehicle, VehicleDBStorage
-				& High & Med & Med \\ \hline
+				& Low & Med & Low \\ \hline
 
 			\end{tabular}
 		\end{table}
