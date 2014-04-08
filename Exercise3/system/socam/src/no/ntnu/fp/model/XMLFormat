@@ -1,0 +1,55 @@
+<vehicle>
+	<vehicleId> 123 </vehicleId>
+	<series> 4 </series>
+	<historyLog> EnLangString pOWPOW </historyLog>
+	<ecus>
+		<ecu>
+			<ecuId> 2 </ecuId>
+			<SwId> 4 </SwId>
+			<SubSwId> 234 </SubSwId>
+			<newestSw> true/false </newestSw>
+		</ecu>
+		<ecu>
+			<ecuId> 2 </ecuId>
+			<SwId> 4 </SwId>
+			<SubSwId> 2341 </SubSwId>
+			<newestSw> true/false </newestSw>
+		</ecu>	
+		<ecu>
+			<ecuId> 2 </ecuId>
+			<SwId> 4 </SwId>
+			<SubSwId> 23422 </SubSwId>
+			<newestSw> true/false </newestSw>
+		</ecu>
+	</ecus>
+</vehicle>
+	
+	
+<vehicle>
+	<vehicleId>4123</vehicleId>
+	<series>A5</series>
+	<historyLog>23.2.08 - Soft.upgr</historyLog>
+	<ecus>
+		<ecu>
+			<ecuId>45</ecuId>
+			<swId>23</swId>
+			<subSwId>41</subSwId>
+		</ecu>
+		<ecu>
+			<ecuId>46</ecuId>
+			<swId>27</swId>
+			<subSwId>50</subSwId>
+		</ecu>
+		<ecu>
+			<ecuId>47</ecuId>
+			<swId>43</swId>
+			<subSwId>10</subSwId>
+		</ecu>
+		<ecu>
+			<ecuId>48</ecuId>
+			<swId>29</swId>
+			<subSwId>50</subSwId>
+		</ecu>
+	</ecus>
+</vehicle>
+	
