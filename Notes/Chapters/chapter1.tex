@@ -1,1 +1,355 @@
-\chapter{Introduction}
+\chapter{Oversikt fra foiler}
+	
+	\section{Foil 2.0 - 2.2: Introduction}
+		\begin{itemize}
+			\item Main theme:
+				\begin{itemize}
+					\item Requirements without tests will be ignored
+					\item Tests without requirements are meaningless
+				\end{itemize}
+			\item What is a requirement?
+			\item Challenges in requirement engineering
+			\item Phenomena (world/shared/machine)
+			\item Requirement statements
+				\begin{itemize}
+					\item Descriptive
+					\item Predictive
+				\end{itemize}
+			\item Formulation of requirements
+			\item Domain property
+			\item Goal
+				\begin{itemize}
+					\item What is a goal?
+					\item High-level Goal
+					\item Requirement
+					\item Assumption (expectation, responsability)
+				\end{itemize}
+			\item Goal statement typolology
+			\item Goal categorization
+			\item Functional vs non-functional goals
+			\item Goal refinement tree
+			\item Where do we get goals from?
+			\item Qualitative goal-requirements tracing
+			\item Qualitative metrics:
+				\begin{itemize}
+					\item Ambiguous, inconsistent, opaque, noisy, inncomplete, forward referencing
+				\end{itemize}
+			\item Ontology
+		\end{itemize}
+
+	
+	\section{Foil 3.1 - Guided Natual Language (GNL) and Requirement Boilerplates }
+		\begin{itemize}
+			\item Level of requirements
+				\begin{itemize}
+					\item Informal
+					\item Semiformal
+					\item Formal
+				\end{itemize}
+			\item Requirement elicitation (step1 - step 4)
+			\item Challenges with requirement elicitation
+			\item Humans and machines
+			\item GNL and BP
+		\end{itemize}
+
+
+	\section{Foil 3.2: Requirements Traceability}
+		\begin{itemize}
+			\item What is requirement traceability?
+			\item Traceability goals (Validation, verification, system inspection and certification/audits)
+			\item Challenges of traceability
+			\item Traceability metamodels
+			\item Approaches to traceability
+				\begin{itemize}
+					\item Manual trace links
+					\item Scenario driven traceability	
+					\item Trace by tagging
+				\end{itemize}
+			\item Footprints	
+		\end{itemize}
+
+	\section{Foil 3.3: Requirements Testability}
+
+		\begin{itemize}
+			\item Testability definition
+			\item Testability concerns
+				\begin{itemize}
+					\item How easy is it to test the implementation?
+					\item How test-friendly is the requirements?
+				\end{itemize}
+			\item Three ways to check that we have achived our goals:
+				\begin{itemize}
+					\item Executing tests
+					\item Run Experiments
+					\item Inspect code
+				\end{itemize}
+			\item When do we use what? (test, experiments, inspections)
+			\item Testability challenges
+			\item Making requirements testable
+			\item Requirementss for testability (The "what" and the "why")
+			\item A testable requirement need to be:	
+				\begin{itemize}
+					\item Correct
+					\item Complete
+					\item Consistent
+					\item Clear
+					\item Relevant
+					\item Feasible
+					\item Traceable
+				\end{itemize}
+			\item Some sound advice:
+				\begin{itemize}
+					\item Modifying Phrases
+					\item Vague words
+					\item Pronouns with no reference
+					\item Passive voice
+					\item Negative requirements
+					\item Assumptions and comparisasions
+				\end{itemize}
+			\item Concerns releated to implementation and testability:
+				\begin{itemize}
+					\item Autonomy of the system under test
+					\item Observability of the testing progress
+					\item Re-test efficiency
+					\item Test restartability
+				\end{itemize}
+		\end{itemize}
+
+
+	\section{Foil 4.1: Advanced Use Cases}
+		\begin{itemize}
+			\item Advanced use cases vocabulary (Actor, use case, use case model)
+			\item Finding actors
+			\item Finding use cases
+			\item Key points for use cases
+			\item Reuse opportunity for use cases and relationships between use cases:
+				\begin{itemize}
+					\item Dependency
+					\item Include
+					\item Extends
+					\item Generalize
+				\end{itemize}
+			\item Adding details
+			\item From use case to sequence diagram
+			\item Use case index
+				\begin{itemize}
+					\item Scope
+					\item Complexity
+					\item Status
+					\item Priority
+				\end{itemize}
+			\item Use case diagrams: pros and cons
+			\item Textual use case
+				\begin{itemize}
+					\item Use case number
+					\item Application
+					\item Use case name
+					\item Use case description
+					\item Primary actor
+					\item Precondition
+					\item Trigger
+					\item Basic flow
+					\item Alternative flow
+				\end{itemize}
+			\item Textual use case: pros and cons
+			\item Mis-use cases
+			\item Textual mis-use case
+			\item Why mis-use case?
+			\item Mis-use case: pros and cons
+			\item Use case maps
+			\item Use case Maps - path
+		\end{itemize}
+
+
+	\section{Foil 4.2: Test Driven Development (TDD)}
+		\begin{itemize}
+			\item Development and testing
+			\item Why TDD
+			\item Green field projects (the roots of TDD, start at "scratch"/clean slate)
+			\item TDD operates with four pairs of strategies:
+				\begin{itemize}
+					\item What is a green field project?
+					\item Details vs the "big picture"
+					\item Uncertain territory vs. the familiar
+					\item Highest value vs. "low-hanging fruits"
+				\end{itemize}
+			\item Essential TDD concepts:
+				\begin{itemize}
+					\item Fixtures
+					\item Test doubles
+					\item Guidelines for a testable design
+					\item Unit test patterns 
+						\begin{itemize}
+							\item Assertion types: resulting state, guard, delta, custom, interaction
+							\item Keep or throw away a unit test ?
+						\end{itemize}
+					\item Legacy code 
+						\begin{itemize}
+							\item Inflection points (test point)
+							\item Test and change
+						\end{itemize}
+				\end{itemize}
+			\item TDD Acceptance testing
+				\begin{itemize}
+					\item Pick a user story
+					\item Write tests for the story
+					\item Automate the tests
+				\end{itemize}
+		\end{itemize}
+
+	\section{Foil 5.1: Test vs. Inspection - Part 1}
+
+		\begin{itemize}
+			\item Man vs. machine
+			\item Types of inspection:
+				\begin{itemize}
+					\item Walkthrough process
+					\item The informal inspection process
+					\item The formal inspection process
+						\begin{itemize}
+							\item Planning
+							\item Kickoff
+							\item Improve the product
+							\item Checking changes
+							\item Individual checking
+							\item Logging Meeting
+						\end{itemize}
+				\end{itemize}
+			\item Testing process
+			\item Testing types
+				\begin{itemize}
+					\item Unit testing
+					\item Function verification testing
+					\item System verification testing
+				\end{itemize}
+			\item Strong and week points
+			\begin{itemize}
+				\item Testing 
+				\item Inspections
+			\end{itemize}
+		\end{itemize}
+
+	\section{Foil 5.2: Test vs. Inspection - Part 2}
+
+		\begin{itemize}
+			\item Defect types
+			\item Triggers
+			\item Inspection
+				\begin{itemize}
+					\item Defect types
+					\item Triggers
+				\end{itemize}
+			\item Testing
+				\begin{itemize}
+					\item Defect types
+					\item Triggers
+				\end{itemize}
+			\item Inspection as a social process
+				\begin{itemize}
+					\item Gain and loss
+					\item Nominal group vs. Real group
+				\end{itemize}
+		\end{itemize}
+
+
+	\section{Testing and Cost/Benefit}
+		\begin{itemize}
+			\item Why cost/benefit?
+			\item When should we stop testing?
+			\item Which cost should be included?
+			\item Which benefits should be included?
+			\item Hard costs and "soft benefits"
+				\begin{itemize}		
+				 	\item Cost are now
+				 	\item Benefits are often later 
+				 \end{itemize}
+			\item How to assign value to "soft benefits"?
+			\item Creation of value
+			\item Soft benefits
+			\item Cost/benefits are used to decide when to stop testing:
+				\begin{itemize}
+					\item P(Wrong): the probability of making the wrong decision
+					\item Cost(Wrong): the cost of making the wrong decision
+				\end{itemize}
+			\item Risk = P(wrong) * Cost(wrong)
+			\item The value of information
+			\item Regret - pay now or maybe later?
+			\item Leverage, risk and regret: 
+				\begin{itemize}
+					\item Total benefit = regret + benefit
+					\item Total cost = risk + cost
+					\item Leverage = (total benefit - total cost)/total cost
+				\end{itemize}
+		\end{itemize}
+
+
+	\section{Foil 6.1: Writing a Test Strategy}
+		\begin{itemize}
+			\item Strategy vs. plan
+				\begin{itemize}	
+					\item {\it A plan says "Here are the steps", while a strategy says
+					"here are the best steps".} The strategy speaks to the {\bf reason why},
+					while the plan is {\bf focused on how}.
+				\end{itemize}	
+			\item Why a testing strategy
+			\item Testing strategy concepts
+				\begin{itemize}
+					\item Purpose of a test strategy
+					\item Testing focus (Users, analysts, designer, programmer)
+					\item Contents of a testing strategy
+						\begin{itemize}
+							\item Project plan, risks and activities
+							\item Relevant regulations
+							\item Required process and standards
+							\item Supporting guidelines
+							\item Stakeholders
+							\item Necessary resources
+							\item Test levels and phases
+								\begin{itemize}
+									\item Development requriements level
+									\item Design level
+									\item Implementation level
+									\item Test level
+								\end{itemize}
+							\item Completion criteria for each phase
+							\item Required documentation and review method for each document
+						\end{itemize}
+					\item Software integrity levels (IEE and ISO standards)
+					\item Test objectives and priorities
+					\item Test data selection
+					\item Random testing
+					\item Domain partition testing
+					\item Risk based testing
+					\item User profile testing
+					\item Bach's risk-based testing
+				\end{itemize}
+		\end{itemize}
+
+
+	\section{Foil 6.2: White Box and Black Box Testing}
+		\begin{itemize}
+			\item What is white box testing?
+			\item Code coverage
+			\item Path coverage
+			\item Error messages
+			\item What is black box testing?
+			\item Testing real-time systems
+			\item Basic scenario pattern (BSP)
+			\item Key-event service pattern (KSP)
+			\item Test Automation
+			\item White box testing
+				\begin{itemize}
+					\item Static white box testing (Code inspection and walkthrough)
+					\item Dynamic white box testing (Statement coverage, path coverage, decision coverage
+					use coverage).
+				\end{itemize}
+		\end{itemize}
+
+
+	\section{Foil 6.3: Grey Box Testing}
+		\begin{itemize}
+			\item 
+		\end{itemize}
+
+	\section{}
+
