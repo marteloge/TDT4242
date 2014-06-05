@@ -1,5 +1,8 @@
 \chapter{Oversikt fra foiler}
 	
+
+	%------ UKE 2 -----------
+
 	\section{Foil 2.0 - 2.2: Introduction}
 		\begin{itemize}
 			\item Main theme:
@@ -37,8 +40,10 @@
 			\item Ontology
 		\end{itemize}
 
-	
-	\section{Foil 3.1 - Guided Natual Language (GNL) and Requirement Boilerplates }
+
+	%------ UKE 3 -----------
+
+	\section{Foil 3.1: Guided Natual Language (GNL) and Requirement Boilerplates }
 		\begin{itemize}
 			\item Level of requirements
 				\begin{itemize}
@@ -51,7 +56,6 @@
 			\item Humans and machines
 			\item GNL and BP
 		\end{itemize}
-
 
 	\section{Foil 3.2: Requirements Traceability}
 		\begin{itemize}
@@ -116,86 +120,7 @@
 		\end{itemize}
 
 
-	\section{Foil 4.1: Advanced Use Cases}
-		\begin{itemize}
-			\item Advanced use cases vocabulary (Actor, use case, use case model)
-			\item Finding actors
-			\item Finding use cases
-			\item Key points for use cases
-			\item Reuse opportunity for use cases and relationships between use cases:
-				\begin{itemize}
-					\item Dependency
-					\item Include
-					\item Extends
-					\item Generalize
-				\end{itemize}
-			\item Adding details
-			\item From use case to sequence diagram
-			\item Use case index
-				\begin{itemize}
-					\item Scope
-					\item Complexity
-					\item Status
-					\item Priority
-				\end{itemize}
-			\item Use case diagrams: pros and cons
-			\item Textual use case
-				\begin{itemize}
-					\item Use case number
-					\item Application
-					\item Use case name
-					\item Use case description
-					\item Primary actor
-					\item Precondition
-					\item Trigger
-					\item Basic flow
-					\item Alternative flow
-				\end{itemize}
-			\item Textual use case: pros and cons
-			\item Mis-use cases
-			\item Textual mis-use case
-			\item Why mis-use case?
-			\item Mis-use case: pros and cons
-			\item Use case maps
-			\item Use case Maps - path
-		\end{itemize}
-
-
-	\section{Foil 4.2: Test Driven Development (TDD)}
-		\begin{itemize}
-			\item Development and testing
-			\item Why TDD
-			\item Green field projects (the roots of TDD, start at "scratch"/clean slate)
-			\item TDD operates with four pairs of strategies:
-				\begin{itemize}
-					\item What is a green field project?
-					\item Details vs the "big picture"
-					\item Uncertain territory vs. the familiar
-					\item Highest value vs. "low-hanging fruits"
-				\end{itemize}
-			\item Essential TDD concepts:
-				\begin{itemize}
-					\item Fixtures
-					\item Test doubles
-					\item Guidelines for a testable design
-					\item Unit test patterns 
-						\begin{itemize}
-							\item Assertion types: resulting state, guard, delta, custom, interaction
-							\item Keep or throw away a unit test ?
-						\end{itemize}
-					\item Legacy code 
-						\begin{itemize}
-							\item Inflection points (test point)
-							\item Test and change
-						\end{itemize}
-				\end{itemize}
-			\item TDD Acceptance testing
-				\begin{itemize}
-					\item Pick a user story
-					\item Write tests for the story
-					\item Automate the tests
-				\end{itemize}
-		\end{itemize}
+	%------ UKE 5 -----------
 
 	\section{Foil 5.1: Test vs. Inspection - Part 1}
 
@@ -251,8 +176,7 @@
 				\end{itemize}
 		\end{itemize}
 
-
-	\section{Testing and Cost/Benefit}
+	\section{Foil 5.3: Testing and Cost/Benefit}
 		\begin{itemize}
 			\item Why cost/benefit?
 			\item When should we stop testing?
@@ -282,6 +206,8 @@
 				\end{itemize}
 		\end{itemize}
 
+
+	%------ UKE 6 -----------
 
 	\section{Foil 6.1: Writing a Test Strategy}
 		\begin{itemize}
@@ -325,7 +251,6 @@
 				\end{itemize}
 		\end{itemize}
 
-
 	\section{Foil 6.2: White Box and Black Box Testing}
 		\begin{itemize}
 			\item What is white box testing?
@@ -345,11 +270,369 @@
 				\end{itemize}
 		\end{itemize}
 
+	\section{Foil 6.3: Grey Box Testing and Mutation Testing}
+		\begin{itemize}
+			\item What is grey box testing?
+			\item State based testing
+			\item Round-trip path tree
+			\item Mutation testing
+				\begin{itemize}
+					\item Type 1 (change random part of code)
+					\item Type 2 (change random part of input)
+				\end{itemize}
+			\item Mutant testing strategies
+				\begin{itemize}
+					\item First order strategy
+					\item Second order strategy
+						\begin{itemize}
+							\item Random mix
+							\item First2Last
+							\item Same Node
+							\item Same Unit
+							\item DiffOp
+						\end{itemize}
+				\end{itemize}
+			\item Effectiveness measures: test and cost effectiveness
+		\end{itemize}
 
-	\section{Foil 6.3: Grey Box Testing}
+
+	%------ UKE 8 -----------
+
+	\section{Foil 8.1: Test Prioritation (Risk based)}
+		\begin{itemize}
+			\item How to prioritize ? (based on risk!)
+			\item Risk-based testing
+			\item Risk and stakeholders
+			\item Stakeholders
+			\item Risk identification
+			\item Risk identification from use cases
+			\item Consequence table
+			\item Risk assessment
+			\item Qualitative risk assessment
+				\begin{itemize}
+					\item Qualitative risk assessment
+						\begin{itemize}
+							\item Probability/consequence matrix
+							\item The GALE method
+						\end{itemize}
+					\item Qualitative risk assessment based on CORAS model
+				\end{itemize}
+			\item Qualitative assessment
+				\begin{itemize}
+					\item Categories (project size, company turn over, company profit)
+					\item Numbers 
+				\end{itemize}
+			\item Consequence and probability
+			\item Risk and consequences
+			\item The GALE method
+			\item The GALE risk index
+				\begin{itemize}
+					\item Frequency score, $F_{E}$
+					\item Probability score, $P_{E}$
+					\item Severity score, S
+					\item Risk Index I = $F_{E}$ + $P_{E}$ + S
+				\end{itemize}
+			\item The CORAS model
+			\item The CORAS consequence table
+			\item The CORAS frequency table
+			\item CORAS example
+			\item Worry list
+			\item Testing and resources
+			\item Risk- based testing Example
+		\end{itemize}
+
+	\section{Foil 8.2: Requirements Handling}
+		\begin{itemize}
+			\item Criteria for good requirement handling
+			\item Viewpoints, perspectives and views
+			\item Two classes of viewpoint:
+				\begin{itemize}
+					\item Direct viewpoint
+					\item Indirect viewpoint
+				\end{itemize}
+			\item Types of viewpoint
+				\begin{itemize}
+					\item Data sources or sinks
+					\item Representation frameworks
+					\item Receivers of services
+				\end{itemize}
+			\item Viewpoint
+			\item The VORD method
+				\begin{itemize}
+					\item Viewpoint identification
+					\item Viewpoint structuring
+					\item Viewpoint documentation
+					\item Viewpoint-system mapping
+				\end{itemize}
+			\item VORD Example
+			\item Advantages of viewpoint-oriented approaches in requirements handling
+			\item Non-functional goals and soft goals
+			\item Non-functional requirements Framework
+			\item Cross-cutting requirements
+			\item Requirements for COTS
+			\item Requirements for outsourcing
+
+		\end{itemize}
+
+
+	%------ UKE 9 -----------
+
+	\section{Foil 9.1: COTS testing}
+		\begin{itemize}
+			\item Approaches:
+				\begin{itemize}
+					\item Component meta-data approach
+						\begin{itemize}
+							\item What is meta-data?
+							\item Assessment based on meta-data
+						\end{itemize}
+					\item Retro-components approach
+						\begin{itemize}
+							\item Retrospectors
+						\end{itemize}
+					\item Built-in test (BIT) approach
+						\begin{itemize}
+							\item BIT architecture
+							\item BIT dead-lock testing
+						\end{itemize}
+					\item STECC strategy
+					\item COTS
+						\begin{itemize}
+							\item Assessing COTS
+						\end{itemize}
+				\end{itemize}
+			\item Black-box testing reducing usin Input-output analysis
+			\item Test reduction using orthogonal array testing
+		\end{itemize}
+
+	\section{Foil 9.2: Outsourcing, subcontracting and COTS}
+		\begin{itemize}
+			\item Responsability
+			\item Testing and confidence
+			\item A product trustworthiness pattern
+			\item Means to create product trust
+			\item A process trustwothiness pattern
+			\item Means to create process trust
+			\item Testing and outsourcing
+			\item Outsourcing requirements
+			\item Trust in the component
+			\item Testing COTS
+				\begin{itemize}
+					\item Internal robustness testing
+						\begin{itemize}
+							\item Why do we need a wrapper?
+							\item What is a wrapper?
+							\item Fault injection
+						\end{itemize}
+					\item External robustness testing
+						\begin{itemize}
+							\item Easy-to-understand message
+						\end{itemize}
+				\end{itemize}
+		\end{itemize}
+
+	%------ UKE 10 -----------
+
+
+	\section{Foil 10.1: Domain Testing}
+		\begin{itemize}
+			\item Predicates
+			\item Path conditions
+			\item Path domains
+				\begin{itemize}
+					\item Open
+					\item Closed
+				\end{itemize}
+			\item Domain error
+			\item ON/OFF points
+			\item Example: two dimensional space
+			\item The problem of size and precision
+			\item A simpllyfied strategy
+			\item Effektiveness
+			\item Code containing array references
+			\item Non-linear borders
+			\item Simple algorithm
+			\item The use of domain testing
+		\end{itemize}
+
+	\section{Foil 10.2: Path selection criteria}
+		\begin{itemize}
+			\item Data flow testing
+			\item Define (d-use), Use (u-use), Kill (k-use) (duk)
+			\item Dynamic data flow testing Test strategy
+				\begin{itemize}
+					\item All definitions (AD)
+					\item All predicate-uses (APU)
+					\item All computational uses (ACU)
+					\item All p-use/some c-use (APU + C)
+					\item All c-use/some p-uses (ACU + P)
+					\item All uses (AU)
+					\item All du paths (ADUP)
+				\end{itemize}
+			\item Relationships between strategies
+			\item Use of test coverage measures
+				\begin{itemize}
+					\item model
+					\item Coverage measures considered
+						\begin{itemize}
+							\item Statement coverage
+							\item Branch coverage
+							\item LCSAJ
+						\end{itemize}
+					\item Equation summary
+					\item Usage patterns
+					\item Extended model
+					\item Bishop's coverage model
+					\item A limit result (MTTF)
+				\end{itemize}
+		\end{itemize}
+
+	\section{Foil 10.3: Test Coverage}
+		\begin{itemize}
+			\item What is test coverage?
+			\item Coverage cateories:
+				\begin{itemize}
+					\item Program based coverage
+						\begin{itemize}
+							\item Statement coverage
+							\item Branch coverage
+							\item Basic path coverage
+						\end{itemize}
+					\item Specification based coverage
+				\end{itemize}
+			\item Finite applicability
+			\item Use of test coverage
+				\begin{itemize}
+					\item Test acceptance criteria
+					\item Avoid redundancy
+				\end{itemize}
+			\item Fault seeding
+			\item Fault seeding and estimation
+			\item Capture/recapture
+			\item Output coverage
+			\item Specification based coverage
+			\item Quality factor estimation
+			\item Basic assumptions
+			\item Choice of models 
+				\begin{itemize}
+					\item Errors
+					\item Coverage
+					\item Parameters
+					\item Final model
+				\end{itemize}
+
+		\end{itemize}
+
+
+	%------ UKE 13 -----------
+
+	\section{Foil 13.1: Agile requirements through user stories and scenarios}
 		\begin{itemize}
 			\item 
 		\end{itemize}
 
-	\section{}
+	\section{Foil 13.2 - 13-3: Advanced Use cases}
+		\begin{itemize}
+				\item Advanced use cases vocabulary (Actor, use case, use case model)
+				\item Finding actors
+				\item Finding use cases
+				\item Key points for use cases
+				\item Reuse opportunity for use cases and relationships between use cases:
+					\begin{itemize}
+						\item Dependency
+						\item Include
+						\item Extends
+						\item Generalize
+					\end{itemize}
+				\item Adding details
+				\item From use case to sequence diagram
+				\item Use case index
+					\begin{itemize}
+						\item Scope
+						\item Complexity
+						\item Status
+						\item Priority
+					\end{itemize}
+				\item Use case diagrams: pros and cons
+				\item Textual use case
+					\begin{itemize}
+						\item Use case number
+						\item Application
+						\item Use case name
+						\item Use case description
+						\item Primary actor
+						\item Precondition
+						\item Trigger
+						\item Basic flow
+						\item Alternative flow
+					\end{itemize}
+				\item Textual use case: pros and cons
+				\item Mis-use cases
+				\item Textual mis-use case
+				\item Why mis-use case?
+				\item Mis-use case: pros and cons
+				\item Use case maps
+				\item Use case Maps - path
+		\end{itemize}
 
+
+	%------ UKE 14 -----------
+
+
+	\section{Foil 14.1-14.2: Test Driven Development (TDD)}
+		\begin{itemize}
+				\item Development and testing
+				\item Why TDD
+				\item Green field projects (the roots of TDD, start at "scratch"/clean slate)
+				\item TDD operates with four pairs of strategies:
+					\begin{itemize}
+						\item What is a green field project?
+						\item Details vs the "big picture"
+						\item Uncertain territory vs. the familiar
+						\item Highest value vs. "low-hanging fruits"
+					\end{itemize}
+				\item Essential TDD concepts:
+					\begin{itemize}
+						\item Fixtures
+						\item Test doubles
+						\item Guidelines for a testable design
+						\item Unit test patterns 
+							\begin{itemize}
+								\item Assertion types: resulting state, guard, delta, custom, interaction
+								\item Keep or throw away a unit test ?
+							\end{itemize}
+						\item Legacy code 
+							\begin{itemize}
+								\item Inflection points (test point)
+								\item Test and change
+							\end{itemize}
+					\end{itemize}
+				\item TDD Acceptance testing
+					\begin{itemize}
+						\item Pick a user story
+						\item Write tests for the story
+						\item Automate the tests
+					\end{itemize}
+			\end{itemize}
+	
+	\section{Foil 14.3: Random Testing}
+		\begin{itemize}
+			\item 
+		\end{itemize}
+
+	\section{Foil 14.4: The effect of experience on the use of TDD}
+		\begin{itemize}
+			\item 
+		\end{itemize}
+
+	
+
+	%------ UKE 15 pensum ?????? -----------
+
+	\section{Foil 15.1: Regression Testing}
+
+	\section{Foil 15.2: FIrewalls for Regression Testing}
+
+	\section{Foil 15.3: Non-functional Requirements}
+
+	\section{Foil 15.4: Scenario Testing}
